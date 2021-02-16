@@ -15,7 +15,6 @@ class Client:
         self.name = name
         self.new_messages = []
         self.client_socket = socket(AF_INET, SOCK_STREAM)
-        # self.client_socket.bind(self.ADDR)
         self.client_socket.connect(self.ADDR)
         self.receive_thread = Thread(target=self.receive_messages)
         self.receive_thread.start()

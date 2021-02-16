@@ -19,7 +19,6 @@ def connect_user():
 def send_message(client):
     """ Get user message and send it """
     while True:
-        # msg = input(f'{client.name}> ')
         msg = input()
         client.send_message(msg)
         if msg == DISCONNECT_MSG:
